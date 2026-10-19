@@ -68,19 +68,18 @@
         "isDefaultSort": true
       }
     },
-    "TopN": {
-  "Expression": {
-    "Measure": {
-      "Expression": {
-        "SourceRef": { "Entity": "TransactionItems_Matched" }
-      },
-      "Property": "Total Items Sold"
-    }
+
+"TopN": {
+    "Expression": {
+      "Measure": {
+        "Expression": { "SourceRef": { "Entity": "TransactionItems_Matched" } },
+        "Property": "Total Items Sold"
+      }
+    },
+    "Count": 10,
+    "Direction": "Descending"
   },
-  "Count": 10,
-  "Direction": "Descending"
-},
-"objects": {
+  "objects": {
       "general": [
         {
           "properties": {}

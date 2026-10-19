@@ -1,0 +1,63 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "kpi_total_items_sold",
+  "position": {
+    "x": 1435,
+    "y": 165,
+    "z": 7,
+    "height": 125,
+    "width": 445,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "TransactionItems_Matched"
+                    }
+                  },
+                  "Property": "Total Items Sold"
+                }
+              },
+              "queryRef": "TransactionItems_Matched.Total Items Sold",
+              "nativeQueryRef": "Total Items Sold"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2c1bcd6dd11aa6755301",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "TransactionItems_Matched"
+              }
+            },
+            "Property": "Total Items Sold"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

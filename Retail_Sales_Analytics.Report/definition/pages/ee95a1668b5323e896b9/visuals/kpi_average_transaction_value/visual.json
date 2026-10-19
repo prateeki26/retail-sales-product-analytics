@@ -1,0 +1,63 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "kpi_average_transaction_value",
+  "position": {
+    "x": 970,
+    "y": 165,
+    "z": 6,
+    "height": 125,
+    "width": 440,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Transactions"
+                    }
+                  },
+                  "Property": "Average Transaction Value"
+                }
+              },
+              "queryRef": "Transactions.Average Transaction Value",
+              "nativeQueryRef": "Average Transaction Value"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c165f3a44f7a2aa6f69f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transactions"
+              }
+            },
+            "Property": "Average Transaction Value"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

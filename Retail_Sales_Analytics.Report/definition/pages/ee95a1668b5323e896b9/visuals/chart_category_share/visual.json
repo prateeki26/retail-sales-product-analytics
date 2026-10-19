@@ -1,0 +1,112 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "chart_category_share",
+  "position": {
+    "x": 1210,
+    "y": 680,
+    "z": 11,
+    "height": 370,
+    "width": 670,
+    "tabOrder": 11
+  },
+  "visual": {
+    "visualType": "donutChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "TransactionItems_Matched"
+                    }
+                  },
+                  "Property": "Category"
+                }
+              },
+              "queryRef": "TransactionItems_Matched.Category",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "TransactionItems_Matched"
+                    }
+                  },
+                  "Property": "Total Items Sold"
+                }
+              },
+              "queryRef": "TransactionItems_Matched.Total Items Sold"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "TransactionItems_Matched"
+                  }
+                },
+                "Property": "Total Items Sold"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9fac690d391edde77902",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "TransactionItems_Matched"
+              }
+            },
+            "Property": "Category"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a6bc3769d432e3b957b4",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "TransactionItems_Matched"
+              }
+            },
+            "Property": "Total Items Sold"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

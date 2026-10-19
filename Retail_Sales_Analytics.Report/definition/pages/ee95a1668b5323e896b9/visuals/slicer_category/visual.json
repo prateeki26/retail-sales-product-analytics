@@ -1,0 +1,62 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "slicer_category",
+  "position": {
+    "x": 1240,
+    "y": 80,
+    "z": 3,
+    "height": 75,
+    "width": 640,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "TransactionItems_Matched"
+                    }
+                  },
+                  "Property": "Category"
+                }
+              },
+              "queryRef": "TransactionItems_Matched.Category",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3651c101f227d723b421",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "TransactionItems_Matched"
+              }
+            },
+            "Property": "Category"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}
